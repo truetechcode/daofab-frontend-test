@@ -1,16 +1,19 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Container, Row, Card, Button, Table, Pagination } from 'react-bootstrap'
+import { Container, Table, Pagination } from 'react-bootstrap'
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true); //This is the loading state
+  const [data, setData] = useState(null); //This is the fetch data from the server
   const [page, setPage] = useState({
-    currentPage: 1,
-    totalPage: 1
+    currentPage: 1, // This is holds the value of the current page displayed
+    totalPage: 1 // This holds the value of the total number pages returned from the server
   });
 
+  /**
+   * Pagination Items are generated from the total number of pages returned from the server
+   */
   let active = page.currentPage;
   let items = [];
   
@@ -22,11 +25,17 @@ export default function Home() {
     );
   }
 
+  /**
+   * The sorting function
+   */
   const sortById = () => {
     let newData = data.sort().reverse()
     setData([...newData]);
   }
 
+  /**
+   * This useEffect hook fetches the parent data from the server
+   */
   useEffect(() => {
     let url = `http://localhost:4000/api?page=${page.currentPage}`;
 
@@ -48,14 +57,12 @@ export default function Home() {
           })
           .then(res => res)
           .then(res => {
-              // console.log(res.totalPage);
               setData(res.data);
               setPage({...page, totalPage: res.totalPage});
               setIsLoading(false);
           })
           .catch(error => error)
           .then(res => console.log(res))
-          // .finally(() => setIsLoading(false))
   }, [page.currentPage])
 
   return (

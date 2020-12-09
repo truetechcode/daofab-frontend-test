@@ -1,12 +1,15 @@
 import Head from 'next/head'
-import Router, { useRouter } from 'next/router';
+import Router from 'next/router';
 import { useEffect, useState } from 'react';
-import { Container, Row, Card, Button, Table } from 'react-bootstrap'
+import { Container, Button, Table } from 'react-bootstrap'
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true); //This is the loading state
+  const [data, setData] = useState(null); //This is the fetch data from the server
   
+    /**
+   * This useEffect hook fetches the child data from the server based on the parent id passed
+   */
   useEffect(() => {
     let id = Router.query.id;
     let url = `http://localhost:4000/api/${id}`;

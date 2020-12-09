@@ -27,7 +27,7 @@ A step by step series of examples that tell you how to get a development env run
 - Clone Repository
 
 ```
-git.
+git clone git@github.com:truetechcode/daofab-frontend-test.git
 ```
 
 - Install Dependencies

@@ -1,21 +1,49 @@
-# Next.js with react-bootstrap example
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+</p>
 
-This example shows how to use Next.js along with [react-bootstrap](https://react-bootstrap.github.io/).
+<h3 align="center">DAOFAB TEST APP FRONTEND</h3>
 
-## Deploy your own
+---
 
-Deploy the example using [Vercel](https://vercel.com):
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-react-bootstrap)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
 
-## How to use
+### Prerequisites
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+What things you need to install the software.
 
-```bash
-npx create-next-app --example with-react-bootstrap with-react-bootstrap-app
-# or
-yarn create next-app --example with-react-bootstrap with-react-bootstrap-app
+```
+Nodejs
+NPM / Yarn
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Installing
+
+A step by step series of examples that tell you how to get a development env running.
+
+- Clone Repository
+
+```
+git.
+```
+
+- Install Dependencies
+
+```
+npm install
+or
+yarn install
+```
+
+- Run Server
+
+```
+npm run dev
+```
+
+## ⛏️ Built Using <a name = "built_using"></a>
+
+- [NextJs](https://nextjs.org/) - React Framework
